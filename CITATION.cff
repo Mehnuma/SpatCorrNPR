@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Tabassum"
+  given-names: "Mehnuma"
+  orcid: "https://orcid.org/0000-0001-6057-6763"
+- name:
+      given: Kris
+      non-dropping-particle: De
+      family: Brabanter
+  orcid: "https://orcid.org/0000-0002-7697-1079"
+title: "SpatCorrNPR"
+version: 1.0.0
+doi: 10.5281/zenodo.18408875
+date-released: 2026-01-28
+url: "https://github.com/Mehnuma/SpatCorrNPR"
