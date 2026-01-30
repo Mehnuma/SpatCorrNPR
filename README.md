@@ -6,5 +6,6 @@ Local polynomial regression is a widely used smoothing method in nonparametric s
 
 </div>
 
-
+# Citation
+Cite this toolbox: [![DOI](https://zenodo.org/badge/1092089508.svg)](https://doi.org/10.5281/zenodo.18408874)
 
