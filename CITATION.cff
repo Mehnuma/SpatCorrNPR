@@ -4,10 +4,8 @@ authors:
 - family-names: "Tabassum"
   given-names: "Mehnuma"
   orcid: "https://orcid.org/0000-0001-6057-6763"
-- name:
-      given: Kris
-      non-dropping-particle: De
-      family: Brabanter
+- family-names: "De Brabanter"
+  given-names: "Kris"
   orcid: "https://orcid.org/0000-0002-7697-1079"
 title: "SpatCorrNPR"
 version: 1.0.0
