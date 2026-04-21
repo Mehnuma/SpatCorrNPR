@@ -14,20 +14,25 @@ function plotSmoothedFunction(X,y,bw,kernel,grain)
 % Authors: Mehnuma Tabassum, Kris De Brabanter
 % Email: mehnuma@iastate.edu
 
+[~, dimX] = size(X);
+if nargin>5
+  errordlg('Please Use the Correct Syntax')
+end
+if dimX>2
+    errordlg('Please Provide 1-D or 2-D Input')
+end
 if isempty(bw)
     errordlg('Please Provide a Bandwidth')
     return
 end
-
 if isempty(kernel)
     errordlg('Please Specify a Kernel')
     return
 end
-
 if isempty(grain)
     grain = 50;
 end
-[~, dimX] = size(X);
+
 if dimX==1
     if ~isscalar(bw)
         errordlg('Please Provide a Scalar Bandwidth for 1-D Input');
