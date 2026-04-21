@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2023b"><title>Examples for Different Modules in SpatCorrNPR</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.8px; min-height: 0px; white-space: pre-wrap; color: rgb(192, 76, 11); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: 400; text-align: left;  }
+.S1 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: left;  }
+.S2 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: 700; text-align: left;  }
+.S3 { margin: 20px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: 700; text-align: left;  }
+.CodeBlock { background-color: #F5F5F5; margin: 10px 0 10px 0; }
+.S4 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217); border-bottom: 0px none rgb(33, 33, 33); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S5 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 0px none rgb(33, 33, 33); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S6 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S7 { margin: 10px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: left;  }
+.S8 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: center;  }
+.S9 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 4px; padding: 6px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style></head><body><div class = rtcContent><h1  class = 'S0'><span>Examples for Different Modules in SpatCorrNPR</span></h1><div  class = 'S1'><span>In this page, we provide the syntax and examples on how to use various modules of SpatCorrNPR.</span></div><h2  class = 'S2'><span></span></h2><h2  class = 'S3'><span>Module-1: Data Import</span></h2><div  class = 'S1'><span>The following lines of code can be used to import the data.</span><span> </span><span>The first dataset (</span><span style=' font-style: italic;'>testData.csv</span><span>) used is without the original function,</span><span> </span><span>m</span><span> </span><span>values.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >data = readmatrix (</span><span style="color: #a709f5;">'testData.csv'</span><span >) ;</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >X_1d = data (: ,1) ;     </span><span style="color: #008013;">% for 1 - D input</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >X_2d = data (: ,1:2) ;   </span><span style="color: #008013;">% for 2 - D input</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >y = data (: ,3) ;        </span><span style="color: #008013;">% The response</span></span></div></div></div><div  class = 'S7'><span>If the user wishes to use a dataset with</span><span> </span><span>m</span><span> </span><span>values, they can import the</span><span> </span><span style=' font-style: italic;'>testDataWithM.csv</span><span> </span><span>file. In that case, the data import would be like the following:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >dataWithM = readmatrix(</span><span style="color: #a709f5;">'testDataWithM.csv'</span><span >); </span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >X_1d = dataWithM(:,1);   </span><span style="color: #008013;">% for 1-D input </span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >X_2d = dataWithM(:,1:2); </span><span style="color: #008013;">% for 2-D input </span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >y = dataWithM(:,3);      </span><span style="color: #008013;">% The response</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >m = dataWithM(:,4);      </span><span style="color: #008013;">% The true function</span></span></div></div></div><div  class = 'S7'><span>The first three columns of both datasets are the same. The second dataset has an extra column containing the true function values, which can be used for benchmark examples.</span></div><h2  class = 'S2'><span></span></h2><h2  class = 'S3'><span>Module-2: Bandwidth Optimization</span></h2><div  class = 'S1'><span>The general syntax for bandwidth optimization is as follows:</span></div><div  class = 'S8'><span style=' font-weight: bold;'>optimal_bandwidth = bwOptimization(X, y, m, kernel, objective, h_lb, h_ub, R);</span></div><div  class = 'S1'><span>where, </span><span style=' font-family: monospace;'>X</span><span style=' font-family: monospace;'> </span><span>is the input,</span><span> </span><span style=' font-family: monospace;'>y</span><span style=' font-family: monospace;'> </span><span>is the response,</span><span> </span><span style=' font-family: monospace;'>m</span><span style=' font-family: monospace;'> </span><span>is the true function values,</span><span> </span><span style=' font-family: monospace;'>kernel</span><span style=' font-family: monospace;'> </span><span>is the kernel function used for the regression,</span><span> </span><span style=' font-family: monospace;'>objective</span><span style=' font-family: monospace;'> </span><span>is the objective function to be minimized,</span><span> </span><span style=' font-family: monospace;'>h_lb </span><span>is the lower bound for the bandwidth,</span><span> </span><span style=' font-family: monospace;'>h_ub</span><span style=' font-family: monospace;'> </span><span>is the upper bound for the bandwidth, and</span><span> </span><span style=' font-family: monospace;'>R</span><span style=' font-family: monospace;'> </span><span>is the true covariance matrix. The output</span><span> </span><span style=' font-family: monospace;'>optimal_bandwidth</span><span style=' font-family: monospace;'> </span><span>is the optimal solution from the bandwidth optimization (scalar for 1-D</span><span> </span><span style=' font-family: monospace;'>X</span><span>, and a</span><span> </span><span>2</span><span> </span><span>×</span><span> </span><span>2</span><span> </span><span>symmetric matrix for 2-D</span><span> </span><span style=' font-family: monospace;'>X</span><span>). </span></div><div  class = 'S1'><span>The bandwidth optimization for 1-D data is fairly straightforward as it is a scalar value. The following lines of codes demonstrate bandwidth optimization for the</span><span> </span><span style=' font-family: monospace;'>Residual Sum of Squares (RSS)</span><span style=' font-family: monospace;'> </span><span>objective and</span><span> </span><span style=' font-family: monospace;'>Epanechnikov</span><span style=' font-family: monospace;'> </span><span>kernel.</span><span> </span><span>The limits for the 1-D case are [0.01, 0.5].</span><span> </span><span>The syntax for calling the optimizer is as follows:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre"><span >optimal_h = bwOptimization(X_1d, y, [], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Residual Sum of Squares (RSS)'</span><span >, 0.04, 0.5, []);</span></span></div></div></div><div  class = 'S7'><span>If the optimization criterion is changed to</span><span> </span><span style=' font-family: monospace;'>Corrected GCV (GCVc)</span><span>, the</span><span> </span><span>R</span><span> </span><span>matrix needs to be imported, which can be done using the following lines:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >RMatrix = readmatrix(</span><span style="color: #a709f5;">'trueR.csv'</span><span >); </span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >optimal_h = bwOptimization(X_1d, y, [], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Corrected GCV (GCVc)'</span><span >, 0.01, 0.5, RMatrix);</span></span></div></div></div><div  class = 'S7'><span>The</span><span> </span><span style=' font-family: monospace;'>m</span><span style=' font-family: monospace;'> </span><span>values are required if the</span><span> </span><span style=' font-family: monospace;'>Asymptotic Squared Error (ASE)</span><span style=' font-family: monospace;'> </span><span>objective is chosen.</span><span> </span><span>We can use the following lines in that case:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre"><span >optimal_h = bwOptimization(X_1d, y, m, </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Asymptotic Squared Error (ASE)'</span><span >, 0.01, 0.5, []);</span></span></div></div></div><div  class = 'S7'><span></span></div><div  class = 'S1'><span>The optimization for the 2-D input is similar, except the bounds are required to be</span><span> </span><span>2</span><span> </span><span>×</span><span> </span><span>2 symmetric matrices.</span><span> </span><span>Below are the codes for the 2-D bandwidth optimization for</span><span> </span><span style=' font-family: monospace;'>Residual Sum of Squares (RSS)</span><span style=' font-family: monospace;'> </span><span>objective and</span><span> </span><span style=' font-family: monospace;'>Epanechnikov</span><span style=' font-family: monospace;'> </span><span>kernel:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre"><span >optimal_H = bwOptimization(X_2d, y, [], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Residual Sum of Squares (RSS)'</span><span >, [0.2, 0.001; 0.001 0.2], [0.5, 0.1; 0.1 0.5], []); </span></span></div></div></div><div  class = 'S7'><span>The syntax for the</span><span> </span><span style=' font-family: monospace;'>Corrected GCV ( GCVc)</span><span style=' font-family: monospace;'> </span><span>criterion for the 2-D is similar to the 1-D case, which is shown below:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre"><span >optimal_H = bwOptimization(X_2d, y,[], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Corrected GCV (GCVc)'</span><span >, [0.08, 0.001; 0.001 0.08], [0.5, 0.1; 0.1 0.5], RMatrix);</span></span></div></div></div><div  class = 'S7'><span>For the </span><span style=' font-family: monospace;'>Asymptotic Squared Error (ASE) </span><span>objective, the user can execute the following lines:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre"><span >optimal_H = bwOptimization(X_2d, y, m, </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Asymptotic Squared Error (ASE)'</span><span >, [0.08, 0.001; 0.001 0.08], [0.5, 0.1; 0.1 0.5], []);</span></span></div></div></div><h2  class = 'S2'><span></span></h2><h2  class = 'S3'><span>Module-3: Error Evaluation</span></h2><div  class = 'S1'><span>The general syntax for error evaluation is as follows:</span></div><div  class = 'S8'><span style=' font-weight: bold;'>err = evaluate_error(X, y, m, criterion, bw, kernel);</span></div><div  class = 'S1'><span>where, </span><span style=' font-family: monospace;'>X</span><span style=' font-family: monospace;'> </span><span>is the input,</span><span> </span><span style=' font-family: monospace;'>y</span><span style=' font-family: monospace;'> </span><span>is the response,</span><span> </span><span style=' font-family: monospace;'>m</span><span style=' font-family: monospace;'> </span><span>is the true function values,</span><span> </span><span style=' font-family: monospace;'>criterion</span><span style=' font-family: monospace;'> </span><span>is the error metric to be used,</span><span> </span><span style=' font-family: monospace;'>bw</span><span style=' font-family: monospace;'> </span><span>refers to the bandwidth (scalar for 1-D</span><span> </span><span style=' font-family: monospace;'>X</span><span style=' font-family: monospace;'> </span><span>and a</span><span> </span><span>2</span><span> </span><span>×</span><span> </span><span>2</span><span> </span><span>symmetric matrix for 2-D</span><span> </span><span style=' font-family: monospace;'>X</span><span>), and</span><span> </span><span style=' font-family: monospace;'>kernel</span><span style=' font-family: monospace;'> </span><span>is the kernel function used for the regression.</span><span> </span><span>The output</span><span> </span><span style=' font-family: monospace;'>err</span><span style=' font-family: monospace;'> </span><span>is the calculated error metric.</span></div><div  class = 'S1'><span>The following two snippets calculate the</span><span> </span><span style=' font-family: monospace;'>PRESS</span><span style=' font-family: monospace;'> </span><span>values for 1-D and 2-D</span><span> </span><span style=' font-family: monospace;'>X</span><span>, respectively.</span><span> </span><span>The results are shown for arbitrary bandwidth values.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >press_1d = evaluate_error(X_1d, y, [], </span><span style="color: #a709f5;">'PRESS'</span><span >, 0.0824, </span><span style="color: #a709f5;">'Epanechnikov'</span><span >);               </span><span style="color: #008013;">% for 1-D X</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >press_2d = evaluate_error(X_2d, y, [], </span><span style="color: #a709f5;">'PRESS'</span><span >, [0.25 0.1; 0.1 0.25], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >); </span><span style="color: #008013;">% for 2-D X</span></span></div></div></div><div  class = 'S7'><span>Similarly, we can find the</span><span> </span><span style=' font-family: monospace;'>ASE</span><span style=' font-family: monospace;'> </span><span>values for the datasets. The additional input here is the</span><span> </span><span style=' font-family: monospace;'>m</span><span style=' font-family: monospace;'> </span><span>values.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >ase_1d = evaluate_error(X_1d, y, m, </span><span style="color: #a709f5;">'ASE'</span><span >, 0.0824, </span><span style="color: #a709f5;">'Epanechnikov'</span><span >);                    </span><span style="color: #008013;">% for 1-D X</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >ase_2d = evaluate_error(X_2d, y, m, </span><span style="color: #a709f5;">'ASE'</span><span >, [0.25 0.1; 0.1 0.25], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >);      </span><span style="color: #008013;">% for 2-D X</span></span></div></div></div><h2  class = 'S2'><span></span></h2><h2  class = 'S3'><span>Module-4: Plotting</span></h2><div  class = 'S1'><span style=' font-weight: bold;'>Plot Raw Data: </span><span>This function requires only the</span><span> </span><span style=' font-family: monospace;'>X</span><span style=' font-family: monospace;'> </span><span>and</span><span> </span><span style=' font-family: monospace;'>y</span><span style=' font-family: monospace;'> </span><span>values. The syntax for plotting the raw data is:</span></div><div  class = 'S8'><span style=' font-weight: bold;'>plotRawData(X, y)</span></div><div  class = 'S1'><span>To get a scatterplot of 1-D </span><span style=' font-family: monospace;'>X</span><span>, the following code is used:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre"><span >plotRawData(X_1d,y) </span><span style="color: #008013;">% for 1-D X</span></span></div></div></div><div  class = 'S7'><span>For 2-D </span><span style=' font-family: monospace;'>X</span><span>, the following line produces a 3-D scatterplot.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre"><span >plotRawData(X_2d,y) </span><span style="color: #008013;">% for 2-D X</span></span></div></div></div><div  class = 'S7'><span></span></div><div  class = 'S1'><span style=' font-weight: bold;'>Plot Objective Function:</span><span> The general syntax for plotting objective functions is:</span></div><div  class = 'S8'><span style=' font-weight: bold;'>plotObjectiveFunction(X, y, m, bwlimit, kernel, plotObjective, R_true)</span></div><div  class = 'S1'><span>where, </span><span style=' font-family: monospace;'>X</span><span style=' font-family: monospace;'> </span><span>is the input,</span><span> </span><span style=' font-family: monospace;'>y</span><span style=' font-family: monospace;'> </span><span>is the response,</span><span> </span><span style=' font-family: monospace;'>m</span><span style=' font-family: monospace;'> </span><span>is the true function values,</span><span> </span><span style=' font-family: monospace;'>bwlimit</span><span style=' font-family: monospace;'> </span><span>contains the limits on the bandwidth,</span><span> </span><span style=' font-family: monospace;'>kernel</span><span style=' font-family: monospace;'> </span><span>is the kernel function used for the regression,</span><span> </span><span style=' font-family: monospace;'>plotObjective</span><span style=' font-family: monospace;'> </span><span>is the objective function to be plotted, and</span><span> </span><span style=' font-family: monospace;'>R_true</span><span style=' font-family: monospace;'> </span><span>is the true covariance matrix. As mentioned before, the GUI currently does not support plotting the</span><span> </span><span style=' font-family: monospace;'>Corrected GCV (GCVc)</span><span style=' font-family: monospace;'> </span><span>function; however, the toolbox is able to do that. Similar to the</span><span> </span><span style=' font-family: monospace;'>Bandwidth Optimization</span><span style=' font-family: monospace;'> </span><span>module, the true correlation matrix needs to be imported.</span></div><div  class = 'S1'><span>The two following snippets provide the syntax for plotting the</span><span> </span><span style=' font-family: monospace;'>Residual Sum of Squares (RSS)</span><span style=' font-family: monospace;'> </span><span>function with</span><span> </span><span style=' font-family: monospace;'>Epanechnikov</span><span style=' font-family: monospace;'> </span><span>kernel for 1-D</span><span> </span><span style=' font-family: monospace;'>X</span><span style=' font-family: monospace;'> </span><span>and 2-D</span><span> </span><span style=' font-family: monospace;'>X</span><span>, respectively.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >plotObjectiveFunction(X_1d, y,[], [0.01, 5], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Residual Sum of Squares (RSS)'</span><span >, [])            </span><span style="color: #008013;">% for 1-D X</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >plotObjectiveFunction(X_2d, y,[], [0.05 0.05; 2 2], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Residual Sum of Squares (RSS)'</span><span >, [])     </span><span style="color: #008013;">% for 2-D X</span></span></div></div></div><div  class = 'S7'><span>The syntax for using the </span><span style=' font-family: monospace;'>Corrected GCV (GCVc) </span><span>with </span><span style=' font-family: monospace;'>Epanechnikov </span><span>kernel is as follows:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >RMatrix = readmatrix(</span><span style="color: #a709f5;">'trueR.csv'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >plotObjectiveFunction(X_1d, y,[], [0.01, 0.5], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Corrected GCV (GCVc)'</span><span >, RMatrix)              </span><span style="color: #008013;">% for 1-D X</span></span></div></div></div><div  class = 'S7'><span>Or,</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >RMatrix = readmatrix(</span><span style="color: #a709f5;">'trueR.csv'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >plotObjectiveFunction(X_2d, y,[], [0.05 0.05; 2 2], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Corrected GCV (GCVc)'</span><span >, RMatrix)         </span><span style="color: #008013;">% for 2-D X</span></span></div></div></div><div  class = 'S7'><span>The </span><span style=' font-family: monospace;'>Asymptotic Squared Error (ASE) </span><span>function can be plotted in the following ways:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >plotObjectiveFunction(X_1d, y, m, [0.01, 5], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Asymptotic Squared Error (ASE)'</span><span >, [])           </span><span style="color: #008013;">% for 1-D X</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >plotObjectiveFunction(X_2d, y, m, [0.05 0.05; 2 2], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, </span><span style="color: #a709f5;">'Asymptotic Squared Error (ASE)'</span><span >, [])    </span><span style="color: #008013;">% for 2-D X</span></span></div></div></div><div  class = 'S7'><span></span></div><div  class = 'S1'><span style=' font-weight: bold;'>Plot Smoothed Function: </span><span>The syntax for plotting the smoothed regression function is shown below:</span></div><div  class = 'S8'><span style=' font-weight: bold;'>plotSmoothedFunction(X, y, bw, kernel, grain)</span></div><div  class = 'S1'><span>where, </span><span style=' font-family: monospace;'>X</span><span style=' font-family: monospace;'> </span><span>is the input,</span><span> </span><span style=' font-family: monospace;'>y</span><span style=' font-family: monospace;'> </span><span>is the response,</span><span> </span><span style=' font-family: monospace;'>bw</span><span style=' font-family: monospace;'> </span><span>is the bandwidth,</span><span> </span><span style=' font-family: monospace;'>kernel</span><span style=' font-family: monospace;'> </span><span>is the kernel function used for the regression, and</span><span> </span><span style=' font-family: monospace;'>grain</span><span style=' font-family: monospace;'> </span><span>refers to the plot resolution (optional).</span></div><div  class = 'S1'><span>Below is the syntax for plotting the smoothed function for 1-D</span><span> </span><span style=' font-family: monospace;'>X</span><span style=' font-family: monospace;'> </span><span>and 2-D</span><span> </span><span style=' font-family: monospace;'>X</span><span>, respectively.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >plotSmoothedFunction(X_1d, y, 0.0824, </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, [])                       </span><span style="color: #008013;">% for 1-D X</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >plotSmoothedFunction(X_2d, y, [0.233 0.058; 0.058 0.311], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, [])   </span><span style="color: #008013;">% for 2-D X</span></span></div></div></div><h2  class = 'S2'><span></span></h2><h2  class = 'S3'><span>Module-5: Covariance Estimation</span></h2><div  class = 'S1'><span>The general syntax for estimating the covariance matrix and obtaining the semivariogram plot is:</span></div><div  class = 'S8'><span style=' font-weight: bold;'>CMat = covarianceEstimation(X, y, bw, kernel, nrbins, maxdist, a0, c0, n0, numobs, model, nu, processVariance);</span></div><div  class = 'S1'><span>where, </span><span style=' font-family: monospace;'>X</span><span style=' font-family: monospace;'> </span><span>is the input,</span><span> </span><span style=' font-family: monospace;'>y</span><span style=' font-family: monospace;'> </span><span>is the response,</span><span> </span><span style=' font-family: monospace;'>bw</span><span style=' font-family: monospace;'> </span><span>is the bandwidth,</span><span> </span><span style=' font-family: monospace;'>kernel</span><span style=' font-family: monospace;'> </span><span>is the kernel function used for the regression,</span><span> </span><span style=' font-family: monospace;'>nrbins</span><span style=' font-family: monospace;'> </span><span>is the number of bins for grouping the lag distances,</span><span> </span><span style=' font-family: monospace;'>maxdist</span><span style=' font-family: monospace;'> </span><span>is the maximum distance in the dataset,</span><span> </span><span style=' font-family: monospace;'>a0</span><span style=' font-family: monospace;'> </span><span>is the initial range estimate,</span><span> </span><span style=' font-family: monospace;'>c0</span><span style=' font-family: monospace;'> </span><span>is the initial sill estimate, </span><span style=' font-family: monospace;'>n0</span><span style=' font-family: monospace;'> </span><span>is the initial nugget estimate,</span><span> </span><span style=' font-family: monospace;'>numObs</span><span style=' font-family: monospace;'> </span><span>is the number of observations per lag distance,</span><span> </span><span style=' font-family: monospace;'>model </span><span>represents the theoretical model to be fitted,</span><span> </span><span style=' font-family: monospace;'>nu</span><span style=' font-family: monospace;'> </span><span>represents the smoothness parameter of the Matérn model, and </span><span style=' font-family: monospace;'>processVariance</span><span style=' font-family: monospace;'> </span><span>is the variance of the process. Except for the</span><span> </span><span style=' font-family: monospace;'>X</span><span>,</span><span> </span><span style=' font-family: monospace;'>y</span><span>,</span><span> </span><span style=' font-family: monospace;'>bw</span><span>, </span><span style=' font-family: monospace;'>kernel</span><span>, and</span><span> </span><span style=' font-family: monospace;'>model</span><span>, other inputs are optional. The</span><span> </span><span style=' font-family: monospace;'>nu</span><span style=' font-family: monospace;'> </span><span>parameter is required if the</span><span> </span><span style=' font-family: monospace;'>model </span><span>chosen is</span><span> </span><span style=' font-family: monospace;'>Matérn</span><span>. The output</span><span> </span><span style=' font-family: monospace;'>CMat</span><span style=' font-family: monospace;'> </span><span>is the covariance matrix of the residuals.</span></div><div  class = 'S1'><span>Here are some example codes:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >CMat = covarianceEstimation(X_1d, y, 0.0824, </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, [], [], [], [], [], [], </span><span style="color: #a709f5;">'Exponential'</span><span >, [], []);                      </span><span style="color: #008013;">% for 1-D X</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >CMat = covarianceEstimation(X_2d, y, [0.233 0.058; 0.058 0.311], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, [], [], [], [], [], [], </span><span style="color: #a709f5;">'Exponential'</span><span >, [], []);  </span><span style="color: #008013;">% for 2-D X</span></span></div></div></div><h2  class = 'S2'><span></span></h2><h2  class = 'S3'><span>Module-6: Geoplotting</span></h2><div  class = 'S1'><span>The general syntax for </span><span style=' font-family: monospace;'>geoPlot </span><span>is:</span></div><div  class = 'S8'><span style=' font-weight: bold;'>geoPlot(X, y, bw, kernel, grain, geographicRegion, Latitude, Longitude, responseType)</span></div><div  class = 'S1'><span>where,</span><span> </span><span style=' font-family: monospace;'>X</span><span style=' font-family: monospace;'> </span><span>is the input (typically 2-D spatial data),</span><span> </span><span style=' font-family: monospace;'>y</span><span style=' font-family: monospace;'> </span><span>is the response,</span><span> </span><span style=' font-family: monospace;'>bw</span><span style=' font-family: monospace;'> </span><span>is the bandwidth,</span><span> </span><span style=' font-family: monospace;'>kernel </span><span>is the kernel function used for the regression, and</span><span> </span><span style=' font-family: monospace;'>grain</span><span style=' font-family: monospace;'> </span><span>refers to the plot resolution (optional). The</span><span> </span><span style=' font-family: monospace;'>geographicRegion</span><span style=' font-family: monospace;'> </span><span>specifies the perimeter,</span><span> </span><span style=' font-family: monospace;'>Latitude</span><span style=' font-family: monospace;'> </span><span>and</span><span> </span><span style=' font-family: monospace;'>Longitude</span><span style=' font-family: monospace;'> </span><span>refer to the perimeter latitude and longitude of any region if geographicRegion is chosen</span><span> </span><span style=' font-family: monospace;'>N/A</span><span>, and</span><span> </span><span style=' font-family: monospace;'>responseType </span><span>refers to the sign of the response (</span><span style=' font-family: monospace;'>Positive</span><span>,</span><span> </span><span style=' font-family: monospace;'>Negative</span><span>, or</span><span> </span><span style=' font-family: monospace;'>other</span><span>). If the</span><span> </span><span style=' font-family: monospace;'>geographicRegion </span><span>is</span><span> </span><span style=' font-family: monospace;'>Contiguous US</span><span>, then</span><span> </span><span style=' font-family: monospace;'>Latitude</span><span style=' font-family: monospace;'> </span><span>and</span><span> </span><span style=' font-family: monospace;'>Longitude</span><span style=' font-family: monospace;'> </span><span>are not needed. However, for any other geographic location, the</span><span> </span><span style=' font-family: monospace;'>geographicRegion</span><span style=' font-family: monospace;'> </span><span>should be</span><span> </span><span style=' font-family: monospace;'>N/A</span><span>, and the</span><span> </span><span style=' font-family: monospace;'>Latitude</span><span style=' font-family: monospace;'> </span><span>and the</span><span> </span><span style=' font-family: monospace;'>Longitude </span><span>need to be provided.</span></div><div  class = 'S1'><span>The first</span><span> </span><span style=' font-family: monospace;'>geoPlot</span><span style=' font-family: monospace;'> </span><span>is for the US precipitation data. The following codes are used:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >geoData = readmatrix(</span><span style="color: #a709f5;">'usPrecipitation.csv'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >X = geoData(:,1:2); y = geoData(:,3);</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >geoPlot(X, y, [3.615 0.0026; 0.0026 2.5873], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, [], </span><span style="color: #a709f5;">'Contiguous US'</span><span >, [], [], </span><span style="color: #a709f5;">'Positive'</span><span >)</span></span></div></div></div><div  class = 'S7'><span></span></div><div  class = 'S1'><span>The following example uses a toy dataset from Australia, and defines the perimeter by importing the perimeter data, instead of choosing the</span><span> </span><span style=' font-family: monospace;'>geographicRegion</span><span>. Here is the code:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >geoPerimeter = readmatrix(</span><span style="color: #a709f5;">'australiaPerimeter.csv'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >Lat = geoPerimeter(:,1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >Lon = geoPerimeter(:,2);</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >geoData = readmatrix(</span><span style="color: #a709f5;">'ausData.csv'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >X = geoData(:,1:2); y = geoData(:,3);</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre"><span >geoPlot(X, y, [5.2 0.04; 0.04 7.1], </span><span style="color: #a709f5;">'Epanechnikov'</span><span >, [], </span><span style="color: #a709f5;">'N/A'</span><span >, Lat, Lon, </span><span style="color: #a709f5;">'other'</span><span >)</span></span></div></div></div><div  class = 'S7'></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+%% Examples for Different Modules in SpatCorrNPR
+% In this page, we provide the syntax and examples on how to use various modules 
+% of SpatCorrNPR.
+%% 
+%% Module-1: Data Import
+% The following lines of code can be used to import the data. The first dataset 
+% (_testData.csv_) used is without the original function, m values.
+
+data = readmatrix ('testData.csv') ;
+X_1d = data (: ,1) ;     % for 1 - D input
+X_2d = data (: ,1:2) ;   % for 2 - D input
+y = data (: ,3) ;        % The response
+%% 
+% If the user wishes to use a dataset with m values, they can import the _testDataWithM.csv_ 
+% file. In that case, the data import would be like the following:
+
+dataWithM = readmatrix('testDataWithM.csv'); 
+X_1d = dataWithM(:,1);   % for 1-D input 
+X_2d = dataWithM(:,1:2); % for 2-D input 
+y = dataWithM(:,3);      % The response
+m = dataWithM(:,4);      % The true function
+%% 
+% The first three columns of both datasets are the same. The second dataset 
+% has an extra column containing the true function values, which can be used for 
+% benchmark examples.
+%% 
+%% Module-2: Bandwidth Optimization
+% The general syntax for bandwidth optimization is as follows:
+% 
+% *optimal_bandwidth = bwOptimization(X, y, m, kernel, objective, h_lb, h_ub, 
+% R);*
+% 
+% where, |X is the input, |y is the response, |m is the true function values, 
+% |kernel is the kernel function used for the regression, |objective is the objective 
+% function to be minimized, |h_lb| is the lower bound for the bandwidth, |h_ub 
+% is the upper bound for the bandwidth, and |R is the true covariance matrix. 
+% The output |optimal_bandwidth is the optimal solution from the bandwidth optimization 
+% (scalar for 1-D |X|, and a 2 × 2 symmetric matrix for 2-D |X|). 
+% 
+% The bandwidth optimization for 1-D data is fairly straightforward as it is 
+% a scalar value. The following lines of codes demonstrate bandwidth optimization 
+% for the |Residual Sum of Squares (RSS) objective and |Epanechnikov kernel. The 
+% limits for the 1-D case are [0.01, 0.5]. The syntax for calling the optimizer 
+% is as follows:
+
+optimal_h = bwOptimization(X_1d, y, [], 'Epanechnikov', 'Residual Sum of Squares (RSS)', 0.04, 0.5, []);
+%% 
+% If the optimization criterion is changed to |Corrected GCV (GCVc)|, the R 
+% matrix needs to be imported, which can be done using the following lines:
+
+RMatrix = readmatrix('trueR.csv'); 
+optimal_h = bwOptimization(X_1d, y, [], 'Epanechnikov', 'Corrected GCV (GCVc)', 0.01, 0.5, RMatrix);
+%% 
+% The |m values are required if the |Asymptotic Squared Error (ASE) objective 
+% is chosen. We can use the following lines in that case:
+
+optimal_h = bwOptimization(X_1d, y, m, 'Epanechnikov', 'Asymptotic Squared Error (ASE)', 0.01, 0.5, []);
+%% 
+% 
+% 
+% The optimization for the 2-D input is similar, except the bounds are required 
+% to be 2 × 2 symmetric matrices. Below are the codes for the 2-D bandwidth optimization 
+% for |Residual Sum of Squares (RSS) objective and |Epanechnikov kernel:
+
+optimal_H = bwOptimization(X_2d, y, [], 'Epanechnikov', 'Residual Sum of Squares (RSS)', [0.2, 0.001; 0.001 0.2], [0.5, 0.1; 0.1 0.5], []); 
+%% 
+% The syntax for the |Corrected GCV ( GCVc) criterion for the 2-D is similar 
+% to the 1-D case, which is shown below:
+
+optimal_H = bwOptimization(X_2d, y,[], 'Epanechnikov', 'Corrected GCV (GCVc)', [0.08, 0.001; 0.001 0.08], [0.5, 0.1; 0.1 0.5], RMatrix);
+%% 
+% For the |Asymptotic Squared Error (ASE)| objective, the user can execute the 
+% following lines:
+
+optimal_H = bwOptimization(X_2d, y, m, 'Epanechnikov', 'Asymptotic Squared Error (ASE)', [0.08, 0.001; 0.001 0.08], [0.5, 0.1; 0.1 0.5], []);
+%% 
+%% Module-3: Error Evaluation
+% The general syntax for error evaluation is as follows:
+% 
+% *err = evaluate_error(X, y, m, criterion, bw, kernel);*
+% 
+% where, |X is the input, |y is the response, |m is the true function values, 
+% |criterion is the error metric to be used, |bw refers to the bandwidth (scalar 
+% for 1-D |X and a 2 × 2 symmetric matrix for 2-D |X|), and |kernel is the kernel 
+% function used for the regression. The output |err is the calculated error metric.
+% 
+% The following two snippets calculate the |PRESS values for 1-D and 2-D |X|, 
+% respectively. The results are shown for arbitrary bandwidth values.
+
+press_1d = evaluate_error(X_1d, y, [], 'PRESS', 0.0824, 'Epanechnikov');               % for 1-D X
+press_2d = evaluate_error(X_2d, y, [], 'PRESS', [0.25 0.1; 0.1 0.25], 'Epanechnikov'); % for 2-D X
+%% 
+% Similarly, we can find the |ASE values for the datasets. The additional input 
+% here is the |m values.
+
+ase_1d = evaluate_error(X_1d, y, m, 'ASE', 0.0824, 'Epanechnikov');                    % for 1-D X
+ase_2d = evaluate_error(X_2d, y, m, 'ASE', [0.25 0.1; 0.1 0.25], 'Epanechnikov');      % for 2-D X
+%% 
+%% Module-4: Plotting
+% *Plot Raw Data:* This function requires only the |X and |y values. The syntax 
+% for plotting the raw data is:
+% 
+% *plotRawData(X, y)*
+% 
+% To get a scatterplot of 1-D |X|, the following code is used:
+
+plotRawData(X_1d,y) % for 1-D X
+%% 
+% For 2-D |X|, the following line produces a 3-D scatterplot.
+
+plotRawData(X_2d,y) % for 2-D X
+%% 
+% 
+% 
+% *Plot Objective Function:* The general syntax for plotting objective functions 
+% is:
+% 
+% *plotObjectiveFunction(X, y, m, bwlimit, kernel, plotObjective, R_true)*
+% 
+% where, |X is the input, |y is the response, |m is the true function values, 
+% |bwlimit contains the limits on the bandwidth, |kernel is the kernel function 
+% used for the regression, |plotObjective is the objective function to be plotted, 
+% and |R_true is the true covariance matrix. As mentioned before, the GUI currently 
+% does not support plotting the |Corrected GCV (GCVc) function; however, the toolbox 
+% is able to do that. Similar to the |Bandwidth Optimization module, the true 
+% correlation matrix needs to be imported.
+% 
+% The two following snippets provide the syntax for plotting the |Residual Sum 
+% of Squares (RSS) function with |Epanechnikov kernel for 1-D |X and 2-D |X|, 
+% respectively.
+
+plotObjectiveFunction(X_1d, y,[], [0.01, 5], 'Epanechnikov', 'Residual Sum of Squares (RSS)', [])            % for 1-D X
+plotObjectiveFunction(X_2d, y,[], [0.05 0.05; 2 2], 'Epanechnikov', 'Residual Sum of Squares (RSS)', [])     % for 2-D X
+%% 
+% The syntax for using the |Corrected GCV (GCVc)| with |Epanechnikov| kernel 
+% is as follows:
+
+RMatrix = readmatrix('trueR.csv');
+plotObjectiveFunction(X_1d, y,[], [0.01, 0.5], 'Epanechnikov', 'Corrected GCV (GCVc)', RMatrix)              % for 1-D X
+%% 
+% Or,
+
+RMatrix = readmatrix('trueR.csv');
+plotObjectiveFunction(X_2d, y,[], [0.05 0.05; 2 2], 'Epanechnikov', 'Corrected GCV (GCVc)', RMatrix)         % for 2-D X
+%% 
+% The |Asymptotic Squared Error (ASE)| function can be plotted in the following 
+% ways:
+
+plotObjectiveFunction(X_1d, y, m, [0.01, 5], 'Epanechnikov', 'Asymptotic Squared Error (ASE)', [])           % for 1-D X
+plotObjectiveFunction(X_2d, y, m, [0.05 0.05; 2 2], 'Epanechnikov', 'Asymptotic Squared Error (ASE)', [])    % for 2-D X
+%% 
+% 
+% 
+% *Plot Smoothed Function:* The syntax for plotting the smoothed regression 
+% function is shown below:
+% 
+% *plotSmoothedFunction(X, y, bw, kernel, grain)*
+% 
+% where, |X is the input, |y is the response, |bw is the bandwidth, |kernel 
+% is the kernel function used for the regression, and |grain refers to the plot 
+% resolution (optional).
+% 
+% Below is the syntax for plotting the smoothed function for 1-D |X and 2-D 
+% |X|, respectively.
+
+plotSmoothedFunction(X_1d, y, 0.0824, 'Epanechnikov', [])                       % for 1-D X
+plotSmoothedFunction(X_2d, y, [0.233 0.058; 0.058 0.311], 'Epanechnikov', [])   % for 2-D X
+%% 
+%% Module-5: Covariance Estimation
+% The general syntax for estimating the covariance matrix and obtaining the 
+% semivariogram plot is:
+% 
+% *CMat = covarianceEstimation(X, y, bw, kernel, nrbins, maxdist, a0, c0, n0, 
+% numobs, model, nu, processVariance);*
+% 
+% where, |X is the input, |y is the response, |bw is the bandwidth, |kernel 
+% is the kernel function used for the regression, |nrbins is the number of bins 
+% for grouping the lag distances, |maxdist is the maximum distance in the dataset, 
+% |a0 is the initial range estimate, |c0 is the initial sill estimate, |n0 is 
+% the initial nugget estimate, |numObs is the number of observations per lag distance, 
+% |model| represents the theoretical model to be fitted, |nu represents the smoothness 
+% parameter of the Matérn model, and |processVariance is the variance of the process. 
+% Except for the |X|, |y|, |bw|, |kernel|, and |model|, other inputs are optional. 
+% The |nu parameter is required if the |model| chosen is |Matérn|. The output 
+% |CMat is the covariance matrix of the residuals.
+% 
+% Here are some example codes:
+
+CMat = covarianceEstimation(X_1d, y, 0.0824, 'Epanechnikov', [], [], [], [], [], [], 'Exponential', [], []);                      % for 1-D X
+CMat = covarianceEstimation(X_2d, y, [0.233 0.058; 0.058 0.311], 'Epanechnikov', [], [], [], [], [], [], 'Exponential', [], []);  % for 2-D X
+%% 
+%% Module-6: Geoplotting
+% The general syntax for |geoPlot| is:
+% 
+% *geoPlot(X, y, bw, kernel, grain, geographicRegion, Latitude, Longitude, responseType)*
+% 
+% where, |X is the input (typically 2-D spatial data), |y is the response, |bw 
+% is the bandwidth, |kernel| is the kernel function used for the regression, and 
+% |grain refers to the plot resolution (optional). The |geographicRegion specifies 
+% the perimeter, |Latitude and |Longitude refer to the perimeter latitude and 
+% longitude of any region if geographicRegion is chosen |N/A|, and |responseType| 
+% refers to the sign of the response (|Positive|, |Negative|, or |other|). If 
+% the |geographicRegion| is |Contiguous US|, then |Latitude and |Longitude are 
+% not needed. However, for any other geographic location, the |geographicRegion 
+% should be |N/A|, and the |Latitude and the |Longitude| need to be provided.
+% 
+% The first |geoPlot is for the US precipitation data. The following codes are 
+% used:
+
+geoData = readmatrix('usPrecipitation.csv');
+X = geoData(:,1:2); y = geoData(:,3);
+geoPlot(X, y, [3.615 0.0026; 0.0026 2.5873], 'Epanechnikov', [], 'Contiguous US', [], [], 'Positive')
+%% 
+% 
+% 
+% The following example uses a toy dataset from Australia, and defines the perimeter 
+% by importing the perimeter data, instead of choosing the |geographicRegion|. 
+% Here is the code:
+
+geoPerimeter = readmatrix('australiaPerimeter.csv');
+Lat = geoPerimeter(:,1);
+Lon = geoPerimeter(:,2);
+
+geoData = readmatrix('ausData.csv');
+X = geoData(:,1:2); y = geoData(:,3);
+geoPlot(X, y, [5.2 0.04; 0.04 7.1], 'Epanechnikov', [], 'N/A', Lat, Lon, 'other')
+%% 
+%
+##### SOURCE END #####
+-->
+</div></body></html>

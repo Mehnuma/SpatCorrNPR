@@ -17,7 +17,12 @@ function err = evaluate_error(X,y,m,criterion,bw,kernel)
 % Email: mehnuma@iastate.edu
 
 [nX, dimX] = size(X);
-
+if nargin>6
+  errordlg('Please Use the Correct Syntax')
+end
+if dimX>2
+    errordlg('Please Provide 1-D or 2-D Input')
+end
 if isempty(criterion)
     errordlg('Please Provide an Error Criterion')
     return

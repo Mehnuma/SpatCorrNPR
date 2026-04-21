@@ -19,6 +19,12 @@ function plotObjectiveFunction(X,y,m,bwlimit,kernel,plotObjective,R_true)
 
 [~, dimX] = size(X);
 
+if nargin>7
+  errordlg('Please Use the Correct Syntax')
+end
+if dimX>2
+    errordlg('Please Provide 1-D or 2-D Input')
+end
 if isempty(bwlimit)
     errordlg('Please Provide the Bandwidth Limit')
     return

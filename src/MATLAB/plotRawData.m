@@ -12,7 +12,12 @@ function plotRawData(X,y)
 % Email: mehnuma@iastate.edu
 
 [~, dimX] = size(X);
-
+if nargin>2
+  errordlg('Please Use the Correct Syntax')
+end
+if dimX>2
+    errordlg('Please Provide 1-D or 2-D Input')
+end
 if dimX==1
     scatter(X, y, 40, 'r', 'filled')
     xlabel('Input')

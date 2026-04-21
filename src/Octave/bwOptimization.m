@@ -18,7 +18,12 @@ function H = bwOptimization(X,y,m,kernel,objective,h_lb,h_ub,R)
 % Email: mehnuma@iastate.edu
 
 [n,dimX] = size(X);
-
+if nargin>8
+  errordlg('Please Use the Correct Syntax')
+end
+if dimX>2
+    errordlg('Please Provide 1-D or 2-D Input')
+end
 if isempty(kernel)
     errordlg('Please Provide a Kernel')
     return

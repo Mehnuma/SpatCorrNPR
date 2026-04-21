@@ -18,21 +18,24 @@ function err = evaluate_error(X,y,m,criterion,bw,kernel)
 
 [nX, dimX] = size(X);
 
+if nargin>6
+  errordlg('Please Use the Correct Syntax')
+end
+if dimX>2
+    errordlg('Please Provide 1-D or 2-D Input')
+end
 if isempty(criterion)
     errordlg('Please Provide an Error Criterion')
     return
 end
-
 if ~(strcmp(criterion, 'PRESS') || strcmp(criterion, 'ASE'))
     errordlg('Please use the Available Error Criteria')
     return
 end
-
 if isempty(bw)
     errordlg('Please Provide a Bandwidth')
     return
 end
-
 if dimX==1
     if ~isscalar(bw)
         errordlg('Please Provide a Scalar Bandwidth for 1-D Data');
@@ -49,7 +52,6 @@ elseif dimX==2
         return
     end
 end
-
 if isempty(kernel)
     errordlg('Please Specify a Kernel')
     return

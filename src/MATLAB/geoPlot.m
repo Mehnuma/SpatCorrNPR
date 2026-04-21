@@ -20,11 +20,15 @@ function geoPlot(X,y,bw,kernel,grain,geographicRegion,Latitude,Longitude,respons
 % Email: mehnuma@iastate.edu
 
 [~, dimX] = size(X);
-
+if nargin>9
+  errordlg('Please Use the Correct Syntax')
+end
+if dimX>2
+    errordlg('Please Provide 1-D or 2-D Input')
+end
 if isempty(bw)
     errordlg('Please provide the bandwidth');
 end
-
 if isempty(grain)
     grain = 50;
 end

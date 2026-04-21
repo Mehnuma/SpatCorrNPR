@@ -24,8 +24,13 @@ function CMat = covarianceEstimation(X,y,bw,kernel,nrbins,maxdist,a0,c0,n0,numob
 % Authors: Mehnuma Tabassum, Kris De Brabanter
 % Email: mehnuma@iastate.edu
 
-[nX,~]= size(X);
-
+[nX,dim_X]= size(X);
+if nargin>13
+  errordlg('Please Use the Correct Syntax')
+end
+if dim_X>2
+    errordlg('Please Provide 1-D or 2-D Input')
+end
 [yhat,~] = locpol(X,y,bw,kernel);
 residuals = y-yhat;
 
